@@ -19,7 +19,7 @@ cd ZOYMediaTool
 
 Uygulamanın ihtiyaç duyduğu Python kütüphanelerini yükleyin:
 
-```bash
+```
 pip install -r requirements.txt
 
 ```
@@ -37,7 +37,7 @@ Medya işlemleri için FFmpeg gereklidir:
 
 Tüm hazırlıklar tamamlandıktan sonra uygulamayı başlatın:
 
-```bash
+```
 python main.py
 
 ```
