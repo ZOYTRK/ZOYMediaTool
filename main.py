@@ -138,7 +138,7 @@ class ZoyMediaTool(ctk.CTk):
         self.ig_progress.pack(pady=30)
         self.ig_progress.set(0)
 
-        self.ig_status = ctk.CTkLabel(self.tab_ig, text="Bekleniyor...")
+        self.ig_status = ctk.CTkLabel(self.tab_ig, text="Bekleniyor..")
         self.ig_status.pack()
 
     def setup_converter_tab(self):
