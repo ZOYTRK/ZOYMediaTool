@@ -19,7 +19,7 @@ cd ZOYMediaTool
 
 Uygulamanın ihtiyaç duyduğu Python kütüphanelerini yükleyin:
 
-```
+```bash
 pip install -r requirements.txt
 
 ```
