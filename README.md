@@ -1,4 +1,3 @@
-```markdown
 # ZOY MediaTool
 
 YouTube ve Instagram üzerinden medya indirme ve dosya dönüştürme aracı. (Son kullanıcılar için derlenmiş hazır sürüm sağ taraftaki **Releases** sekmesinde mevcuttur.)
@@ -8,9 +7,11 @@ YouTube ve Instagram üzerinden medya indirme ve dosya dönüştürme aracı. (S
 Projeyi kaynak kod üzerinden (`main.py`) çalıştırmak için aşağıdaki adımları izleyiniz:
 
 ### 1. Kurulum
+
 Terminal veya komut istemcisini açarak projeyi bilgisayarınıza klonlayın ve dizine girin:
+
 ```bash
-git clone [https://github.com/ZOYTRK/ZOYMediaTool.git](https://github.com/ZOYTRK/ZOYMediaTool.git)
+git clone https://github.com/ZOYTRK/ZOYMediaTool.git
 cd ZOYMediaTool
 
 ```
@@ -37,11 +38,7 @@ Medya işlemleri için FFmpeg gereklidir:
 
 Tüm hazırlıklar tamamlandıktan sonra uygulamayı başlatın:
 
-```
+```bash
 python main.py
-
-```
-
-```
 
 ```
