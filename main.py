@@ -67,7 +67,7 @@ class ZoyMediaTool(ctk.CTk):
         self.cancel_flags[tab_id] = True
 
     def setup_youtube_tab(self):
-        self.yt_url = ctk.CTkEntry(self.tab_yt, placeholder_text="YouTube Video URL'si girin...", width=600)
+        self.yt_url = ctk.CTkEntry(self.tab_yt, placeholder_text="YouTube Video URL'si girin....", width=600)
         self.yt_url.pack(pady=(30, 10))
 
         options_frame = ctk.CTkFrame(self.tab_yt, fg_color="transparent")
