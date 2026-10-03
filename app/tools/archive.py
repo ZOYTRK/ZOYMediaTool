@@ -49,7 +49,7 @@ def archive_extract(ctx, files, opts):
                 t.extractall(dest, filter="data")
         elif low.endswith(".7z"):
             try:
-                import py7zr
+                import py7zr  # type: ignore
             except ImportError:
                 raise RuntimeError("7z için: pip install py7zr")
             with py7zr.SevenZipFile(f) as z:

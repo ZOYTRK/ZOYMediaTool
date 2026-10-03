@@ -4,7 +4,7 @@ import os
 from PIL import Image, ImageOps
 
 try:  # iPhone HEIC desteği (opsiyonel: pip install pillow-heif)
-    from pillow_heif import register_heif_opener
+    from pillow_heif import register_heif_opener  # type: ignore
     register_heif_opener()
 except Exception:
     pass

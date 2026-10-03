@@ -1,6 +1,6 @@
 """Araç kataloğu: tüm araçlar tek bir yerden tanımlanır.
 Arayüz bu listeyi okuyup menüleri, kartları ve ayar formlarını otomatik oluşturur."""
-from .tools import downloader, media, image, archive, pdf
+from .tools import downloader, media, image, archive, pdf, documents
 PDF_EXT = ["pdf"]
 
 VIDEO_EXT = ["mp4", "mkv", "webm", "avi", "mov", "flv", "wmv", "mpeg", "mpg", "3gp", "ts", "m4v", "ogv", "mts", "m2ts", "vob"]
@@ -195,18 +195,35 @@ TOOLS = [
     T("archive_extract", "archive", "Arşiv Çıkar", "ZIP, TAR, GZ, 7Z arşivlerini klasöre çıkar.",
       "📂", "#8d6e63", archive.archive_extract, accept=ARCHIVE_EXT),
 
-    # ---------------- BELGE & OFİS (2. aşama) ----------------
-    T("doc_convert", "doc", "Belge Dönüştür", "DOCX, ODT, RTF, TXT, HTML, EPUB arası dönüşüm.", "📝", "#1565c0",
-      accept=OFFICE_EXT),
+    # ---------------- BELGE & OFİS ----------------
+    T("doc_convert", "doc", "Belge Dönüştür", "DOCX, ODT, RTF, TXT, HTML, MD arası dönüşüm.", "📝", "#1565c0",
+      documents.doc_convert, accept=OFFICE_EXT, options=[
+          sel("format", "Hedef format", [["pdf", "PDF Belgesi"], ["docx", "Word (DOCX)"], ["txt", "Düz Metin (TXT)"], ["html", "Web Sayfası (HTML)"]]),
+      ]),
     T("sheet_convert", "doc", "Tablo Dönüştür", "XLSX, XLS, ODS, CSV arası dönüşüm.", "📊", "#2e7d32",
-      accept=OFFICE_EXT),
-    T("slide_convert", "doc", "Sunum Dönüştür", "PPTX, PPT, ODP arası dönüşüm.", "📽️", "#d84315",
-      accept=OFFICE_EXT),
-    T("ebook_convert", "doc", "E-Kitap Dönüştür", "EPUB, FB2, TXT, PDF e-kitap dönüşümü.", "📚", "#6a1b9a"),
-    T("font_convert", "doc", "Font Dönüştür", "TTF, OTF, WOFF, WOFF2 arası dönüşüm.", "🔤", "#455a64"),
-    T("vector_convert", "doc", "Vektör Dönüştür", "SVG → PNG/PDF, PDF → SVG.", "✒️", "#ef6c00"),
-    T("web_capture", "doc", "Web Sayfası Yakala", "Bir web sayfasını PDF veya PNG olarak kaydet.", "🌍", "#0277bd",
-      input="url"),
+      documents.sheet_convert, accept=OFFICE_EXT, options=[
+          sel("format", "Hedef format", [["csv", "CSV (Virgülle Ayrılmış)"], ["xlsx", "Excel (XLSX)"], ["json", "JSON Verisi"], ["html", "HTML Tablosu"], ["pdf", "PDF Belgesi"]]),
+      ]),
+    T("slide_convert", "doc", "Sunum Dönüştür", "PPTX, PPT, ODP sunumlarını PDF veya metne çevir.", "📽️", "#d84315",
+      documents.slide_convert, accept=OFFICE_EXT, options=[
+          sel("format", "Hedef format", [["pdf", "PDF Sunumu (16:9)"], ["txt", "Slayt Metinleri (TXT)"]]),
+      ]),
+    T("ebook_convert", "doc", "E-Kitap Dönüştür", "EPUB, FB2, TXT, PDF e-kitap dönüşümü.", "📚", "#6a1b9a",
+      documents.ebook_convert, accept=["epub", "fb2", "txt", "pdf"], options=[
+          sel("format", "Hedef format", [["pdf", "PDF Belgesi"], ["txt", "Düz Metin (TXT)"], ["html", "HTML Kitap"]]),
+      ]),
+    T("font_convert", "doc", "Font Dönüştür", "TTF, OTF, WOFF, WOFF2 arası dönüşüm.", "🔤", "#455a64",
+      documents.font_convert, accept=["ttf", "otf", "woff", "woff2"], options=[
+          sel("format", "Hedef format", [["woff2", "WOFF2 (Web Font)"], ["woff", "WOFF (Klasik Web)"], ["ttf", "TTF (TrueType)"], ["otf", "OTF (OpenType)"]]),
+      ]),
+    T("vector_convert", "doc", "Vektör Dönüştür", "SVG → PNG/PDF, PDF → SVG dönüşümü.", "✒️", "#ef6c00",
+      documents.vector_convert, accept=["svg", "pdf"], options=[
+          sel("format", "Hedef format", [["png", "PNG Görseli (Raster)"], ["pdf", "PDF Vektör"], ["svg", "SVG Vektör Çizimi"]]),
+      ]),
+    T("web_capture", "doc", "Web Sayfası Yakala", "Bir web sayfasını PDF, HTML veya metin olarak kaydet.", "🌍", "#0277bd",
+      documents.web_capture, input="url", options=[
+          sel("format", "Kayıt formatı", [["pdf", "PDF Belgesi"], ["html", "Tam HTML Sayfası"], ["txt", "Sayfa Metni (TXT)"]]),
+      ]),
 
     # ---------------- PDF (iLovePDF & Office) ----------------
     T("pdf_merge", "pdf-org", "PDF Birleştir", "Birden fazla PDF'i istediğin sırayla birleştir.", "🔗", "#e53935",
