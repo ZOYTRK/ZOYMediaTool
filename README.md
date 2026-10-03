@@ -69,7 +69,16 @@ Python veya herhangi bir kurulum yapmadan doğrudan çalıştırmak için:
 - **PDF'ten Word'e & Word'den PDF'e:** Doküman dönüştürme (Word veya harici Office kurulumu gerektirmeden saf Python fallback desteği ile).
 - **PDF OCR & Onarma:** Taranmış belgeleri aranabilir metne dönüştürme ve hasarlı PDF'leri kurtarma.
 
-#### 6. 🗜️ Arşiv Araçları
+#### 6. 📝 Belge, Ofis & Vektör Araçları
+- **Belge Dönüştür:** DOCX, ODT, RTF, TXT, HTML, MD formatları arası çift yönlü dönüştürme.
+- **Tablo Dönüştür:** XLSX, CSV, JSON, HTML ve PDF formatları arası tablo/veri dönüşümü.
+- **Sunum Dönüştür:** PPTX, PPT sunumlarını slayt bazlı 16:9 PDF veya metin dökümüne çevirme.
+- **E-Kitap Dönüştür:** EPUB, FB2, TXT kitaplarını PDF veya HTML olarak dışa aktarma.
+- **Font Dönüştür:** TTF, OTF, WOFF, WOFF2 web ve masaüstü fontları arası dönüştürme.
+- **Vektör Dönüştür:** SVG → PNG/PDF ve PDF → sayfa bazlı SVG vektör çizim dönüşümü.
+- **Web Sayfası Yakala:** İstenen URL adresini PDF, tam HTML veya metin olarak arşivleme.
+
+#### 7. 🗜️ Arşiv Araçları
 - **Arşiv Oluştur:** Dosya ve klasörleri ZIP, TAR, TAR.GZ, TAR.XZ formatlarında paketleme.
 - **Arşiv Aç:** Sıkıştırılmış arşivleri klasöre çıkartma.
 
