@@ -116,5 +116,12 @@ python main.py
 
 ---
 
+## ⚠️ Yasal Uyarı ve Sorumluluk Reddi (Disclaimer)
+- **ZOY Media Tool**, kişisel kullanım, eğitim ve dosya yönetimi kolaylığı amacıyla geliştirilmiş açık kaynaklı bir araçtır.
+- Bu yazılım aracılığıyla indirilen, dönüştürülen veya işlenen her türlü medya, içerik ve belgelerle ilgili tüm yasal sorumluluk ve telif hakkı yükümlülüğü **doğrudan kullanıcının kendisine aittir**.
+- Yazılım geliştiricileri; kullanıcıların eylemlerinden, üçüncü taraf platformların (YouTube, Instagram vb.) hizmet kullanım koşullarının ihlalinden veya telif haklarına aykırı kullanımlardan doğabilecek hiçbir maddi, manevi veya hukuki sorumluluğu kabul etmez.
+
+---
+
 ## 📄 Lisans
 Bu proje açık kaynaklıdır ve MIT lisansı altında dağıtılmaktadır.
