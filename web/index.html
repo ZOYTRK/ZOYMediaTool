@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="xp-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZOY Media Tool — Medya, Dönüştürme ve PDF Araç Kutusu</title>
+  <meta name="description" content="ZOY Media Tool: YouTube/Instagram indirici, video-ses-görsel dönüştürücü ve PDF araçları. Windows XP temalı masaüstü uygulaması.">
+  <link rel="stylesheet" href="css/xp.css?v=4">
+</head>
+<body>
+  <div class="app">
+    <!-- ============ KENAR ÇUBUĞU ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img src="assets/logo.png" alt="ZOY logosu" class="brand-logo">
+        <div>
+          <div class="brand-name">ZOY Media Tool</div>
+          <div class="brand-sub">Medya • Dönüştürücü • PDF</div>
+        </div>
+      </div>
+      <div class="user-chip" id="user-chip">
+        <span class="avatar" id="user-avatar">Z</span>
+        <span class="user-name" id="user-name">Kullanıcı</span>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-footer">
+        <button class="nav-link" id="btn-sidebar-settings" data-route="#/settings"><span class="ni">⚙️</span>Ayarlar</button>
+        <button class="nav-link" id="btn-sidebar-folder"><span class="ni">📁</span>Çıktı Klasörü</button>
+      </div>
+    </aside>
+
+    <!-- ============ ANA ALAN ============ -->
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1 id="page-title">Dashboard</h1>
+          <div class="crumb" id="page-crumb">Genel Bakış</div>
+        </div>
+        <div class="search">
+          <span>🔍</span>
+          <input id="search-input" type="search" placeholder="Araç ara... (ör. pdf birleştir, mp3)" autocomplete="off">
+        </div>
+        <div class="topbar-actions">
+          <button class="xp-btn sm" id="btn-theme" title="Temayı değiştir">🎨 <span id="theme-label">XP Koyu</span></button>
+          <button class="xp-btn sm" id="btn-jobs" data-route="#/jobs">📋 Kuyruk <span class="badge" id="jobs-badge">0</span></button>
+          <button class="xp-btn sm" id="btn-folder">📁 Klasör</button>
+        </div>
+      </header>
+
+      <main class="content" id="content" tabindex="-1"></main>
+
+      <!-- ============ XP GÖREV ÇUBUĞU ============ -->
+      <footer class="taskbar">
+        <button class="start-btn" id="start-btn"><span class="start-flag">❖</span><i>başlat</i></button>
+        <div class="task-items" id="task-items"></div>
+        <div class="tray">
+          <span class="tray-icon" id="tray-deps" title="Bileşen durumu">🛡️</span>
+          <span class="tray-icon" id="tray-jobs" title="Aktif işler">⚙️ <b id="tray-active">0</b></span>
+          <span class="clock" id="clock">00:00</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ============ BAŞLAT MENÜSÜ ============ -->
+  <div class="start-menu" id="start-menu" hidden>
+    <div class="sm-head">
+      <img src="assets/logo.png" alt="" class="sm-avatar">
+      <span id="sm-user">Kullanıcı</span>
+    </div>
+    <div class="sm-body">
+      <div class="sm-left" id="sm-left"></div>
+      <div class="sm-right" id="sm-right"></div>
+    </div>
+    <div class="sm-foot">
+      <button class="sm-foot-btn" id="sm-settings">⚙️ Ayarlar</button>
+      <button class="sm-foot-btn" id="sm-close">⏻ Menüyü Kapat</button>
+    </div>
+  </div>
+
+  <!-- XP balon bildirimleri -->
+  <div class="balloons" id="balloons"></div>
+  <!-- Sürükle-bırak katmanı -->
+  <div class="drop-overlay" id="drop-overlay"><div>📥 Dosyaları buraya bırakın</div></div>
+
+  <script src="js/app.js?v=4"></script>
+</body>
+</html>

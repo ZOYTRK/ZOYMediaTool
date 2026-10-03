@@ -1,0 +1,1117 @@
+/* =====================================================================
+   ZOY Media Tool — Windows XP Tema Sistemi
+   Temalar: [data-theme="xp-dark"]  (koyu dashboard + XP mavi başlıklar)
+            [data-theme="xp-luna"]  (klasik Luna mavi/bej)
+   ===================================================================== */
+
+/* ---------- TEMA DEĞİŞKENLERİ ---------- */
+:root,
+[data-theme="win2000"] {
+  --bg: #3a6ea5;
+  --bg-content: #3a6ea5;
+  --surface: #d4d0c8;
+  --surface-2: #ece9d8;
+  --surface-3: #c0c0c0;
+  --border: #808080;
+  --border-strong: #404040;
+  --text: #000000;
+  --text-strong: #000000;
+  --muted: #444444;
+  --accent: #0a246a;
+  --accent-2: #0a246a;
+  --select-bg: #0a246a;
+  --select-border: #0a246a;
+  --hover: #b5c7de;
+
+  --title-grad: linear-gradient(90deg, #0a246a 0%, #1084d0 100%);
+  --title-text: #ffffff;
+  --win-border: #404040;
+  --win-body: #d4d0c8;
+
+  --sidebar-bg: #d4d0c8;
+  --sidebar-border: #808080;
+  --sidebar-text: #000000;
+  --sidebar-head: #0a246a;
+
+  --topbar-bg: #d4d0c8;
+  --input-bg: #ffffff;
+  --input-border: #808080;
+
+  --btn-bg: #d4d0c8;
+  --btn-border: #404040;
+  --btn-text: #000000;
+  --btn-hover-glow: none;
+
+  --progress-track: #d4d0c8;
+  --progress-border: #808080;
+
+  --taskbar-bg: #d4d0c8;
+  --tray-bg: #d4d0c8;
+
+  --card-shadow: 1px 1px 0 #000000;
+  --scroll-thumb: #d4d0c8;
+  --scroll-track: #ece9d8;
+  --ok: #008000;
+  --warn: #808000;
+  --err: #800000;
+  --content-bg-image: none;
+}
+
+[data-theme="win2000-dark"] {
+  --bg: #14171d;
+  --bg-content: #14171d;
+  --surface: #24272e;
+  --surface-2: #2b3038;
+  --surface-3: #343a44;
+  --border: #444a56;
+  --border-strong: #111317;
+  --text: #d8dbe2;
+  --text-strong: #ffffff;
+  --muted: #88909e;
+  --accent: #2352a0;
+  --accent-2: #4179d6;
+  --select-bg: #1c3f7d;
+  --select-border: #4179d6;
+  --hover: #2e3542;
+
+  --title-grad: linear-gradient(90deg, #10284d 0%, #1e457f 100%);
+  --title-text: #ffffff;
+  --win-border: #111317;
+  --win-body: #24272e;
+
+  --sidebar-bg: #24272e;
+  --sidebar-border: #444a56;
+  --sidebar-text: #d8dbe2;
+  --sidebar-head: #89b4fa;
+
+  --topbar-bg: #24272e;
+  --input-bg: #181a20;
+  --input-border: #444a56;
+
+  --btn-bg: #2b3038;
+  --btn-border: #111317;
+  --btn-text: #ffffff;
+  --btn-hover-glow: none;
+
+  --progress-track: #181a20;
+  --progress-border: #444a56;
+
+  --taskbar-bg: #24272e;
+  --tray-bg: #24272e;
+
+  --card-shadow: 1px 1px 0 #000000;
+  --scroll-thumb: #343a44;
+  --scroll-track: #181a20;
+  --ok: #34d399;
+  --warn: #fbbf24;
+  --err: #f87171;
+  --content-bg-image: none;
+}
+
+[data-theme="xp-dark"] {
+  --bg: #17191e;
+  --bg-content: #1a1d23;
+  --surface: #22262d;
+  --surface-2: #2a2f37;
+  --surface-3: #313742;
+  --border: #353b46;
+  --border-strong: #464e5b;
+  --text: #dfe3ea;
+  --text-strong: #ffffff;
+  --muted: #8b93a1;
+  --accent: #3a83f1;
+  --accent-2: #5a9cff;
+  --select-bg: #1f5fd1;
+  --select-border: #8fb6ff;
+  --hover: rgba(58, 131, 241, .10);
+
+  --title-grad:
+    linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.06) 45%, rgba(0,0,0,.10) 55%, rgba(255,255,255,.06) 100%),
+    linear-gradient(90deg, #17469f 0%, #2563d1 55%, #3a7fe8 100%);
+  --title-text: #fff;
+  --win-border: #2c3a55;
+  --win-body: #1f2329;
+
+  --sidebar-bg: #15181d;
+  --sidebar-border: #262a31;
+  --sidebar-text: #c9ced7;
+  --sidebar-head: #6f7888;
+
+  --topbar-bg: #1d2026;
+  --input-bg: #15181d;
+  --input-border: #3b424d;
+
+  --btn-bg: linear-gradient(180deg, #343a44 0%, #2a2f37 50%, #262a32 100%);
+  --btn-border: #444c58;
+  --btn-text: #e6e9ef;
+  --btn-hover-glow: inset 0 0 0 1px rgba(255, 196, 64, .55), 0 0 0 1px rgba(255, 196, 64, .15);
+
+  --progress-track: #101216;
+  --progress-border: #4a515c;
+
+  --taskbar-bg: linear-gradient(180deg, #1c3f8f 0%, #2a5cc4 6%, #1f4aa6 12%, #1b419a 50%, #183a8c 92%, #11306f 100%);
+  --tray-bg: linear-gradient(180deg, #0d6ad6 0%, #1290e8 8%, #0f7fdf 50%, #0c6ccf 92%, #0a59ad 100%);
+
+  --card-shadow: 0 1px 0 rgba(255,255,255,.03) inset, 0 2px 8px rgba(0,0,0,.25);
+  --scroll-thumb: #3a404b;
+  --scroll-track: #17191e;
+  --ok: #4cd964;
+  --warn: #ffb020;
+  --err: #ff5a5a;
+  --content-bg-image: none;
+}
+
+[data-theme="xp-luna"] {
+  --bg: #ece9d8;
+  --bg-content: #3a6ea5;
+  --surface: #ffffff;
+  --surface-2: #f4f3ee;
+  --surface-3: #ece9d8;
+  --border: #aca899;
+  --border-strong: #7f9db9;
+  --text: #1b1b1b;
+  --text-strong: #000;
+  --muted: #5a5a5a;
+  --accent: #316ac5;
+  --accent-2: #215dc6;
+  --select-bg: #316ac5;
+  --select-border: #0a246a;
+  --hover: #c1d2ee;
+
+  --title-grad: linear-gradient(180deg, #0997ff 0%, #0053ee 8%, #0050ee 40%, #0066ff 88%, #0066ff 93%, #005bff 95%, #003dd7 96%, #003dd7 100%);
+  --title-text: #fff;
+  --win-border: #0055ea;
+  --win-body: #ece9d8;
+
+  --sidebar-bg: linear-gradient(180deg, #7ba2e7 0%, #6375d6 100%);
+  --sidebar-border: #5a6fd0;
+  --sidebar-text: #215dc6;
+  --sidebar-head: #215dc6;
+
+  --topbar-bg: linear-gradient(180deg, #fbfbf8 0%, #ece9d8 100%);
+  --input-bg: #ffffff;
+  --input-border: #7f9db9;
+
+  --btn-bg: linear-gradient(180deg, #ffffff 0%, #ecebe6 86%, #d6d0c5 100%);
+  --btn-border: #003c74;
+  --btn-text: #000;
+  --btn-hover-glow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889, inset -2px 2px #fbc761, inset 2px -2px #e5a01a;
+
+  --progress-track: #ffffff;
+  --progress-border: #686868;
+
+  --taskbar-bg: linear-gradient(180deg, #1f2f86 0%, #3165c4 3%, #3682e5 6%, #4490e6 10%, #3883e5 12%, #2b71e0 15%, #2663da 18%, #235bd6 20%, #2258d5 23%, #2157d6 38%, #245ddb 54%, #2562df 86%, #245fdc 89%, #2158d4 92%, #1d4ec0 95%, #1941a5 98%);
+  --tray-bg: linear-gradient(180deg, #0c59b9 1%, #139ee9 6%, #18b5f2 10%, #139beb 14%, #1290e8 19%, #0d8dea 63%, #0d9ff1 81%, #0f9eed 88%, #119be9 91%, #1392e2 94%, #137ed7 97%, #095bc9 100%);
+
+  --card-shadow: 2px 2px 6px rgba(0,0,0,.25);
+  --scroll-thumb: #c1d3fb;
+  --scroll-track: #f5f4ea;
+  --ok: #21a121;
+  --warn: #d48a00;
+  --err: #d0301c;
+  --content-bg-image: url("../assets/wallpaper.jpg");
+}
+
+/* ---------- TEMEL ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: Tahoma, "Segoe UI", Verdana, sans-serif;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg);
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+button { font-family: inherit; font-size: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; font-size: 13px; }
+h1, h2, h3 { margin: 0; font-family: "Trebuchet MS", Tahoma, sans-serif; }
+a { color: var(--accent-2); }
+.muted { color: var(--muted); }
+[hidden] { display: none !important; }
+
+::-webkit-scrollbar { width: 14px; height: 14px; }
+::-webkit-scrollbar-track { background: var(--scroll-track); }
+::-webkit-scrollbar-thumb { background: var(--scroll-thumb); border: 3px solid var(--scroll-track); border-radius: 8px; }
+[data-theme="xp-luna"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #c8d6fb, #b6caf7 50%, #a7bdf2);
+  border: 1px solid #fff; outline: 1px solid #94b2f0; border-radius: 3px;
+}
+
+/* ---------- YERLEŞİM ---------- */
+.app { display: grid; grid-template-columns: 236px 1fr; height: 100vh; }
+.main { display: grid; grid-template-rows: auto 1fr 34px; min-width: 0; height: 100vh; }
+.content {
+  overflow: auto; padding: 18px 20px 24px; outline: none;
+  background: var(--bg-content) var(--content-bg-image) center / cover fixed no-repeat;
+}
+
+/* ---------- KENAR ÇUBUĞU ---------- */
+.sidebar {
+  background: var(--sidebar-bg); border-right: 1px solid var(--sidebar-border);
+  display: flex; flex-direction: column; min-height: 0;
+}
+.brand { display: flex; align-items: center; gap: 10px; padding: 14px 14px 10px; }
+.brand-logo { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,.35); }
+.brand-name { font-family: "Trebuchet MS", Tahoma; font-weight: 700; font-size: 15px; color: var(--text-strong); }
+.brand-sub { font-size: 10.5px; color: var(--sidebar-head); }
+[data-theme="xp-luna"] .brand-name { color: #fff; text-shadow: 1px 1px 1px #1a3c8a; }
+[data-theme="xp-luna"] .brand-sub { color: #dfe8ff; }
+
+.user-chip {
+  display: flex; align-items: center; gap: 8px; margin: 2px 12px 8px; padding: 6px 8px;
+  border-radius: 4px; background: var(--surface); border: 1px solid var(--border);
+}
+.avatar {
+  width: 24px; height: 24px; border-radius: 4px; display: grid; place-items: center; font-weight: 700;
+  color: #fff; background: linear-gradient(135deg, #3a83f1, #7e57c2); font-size: 12px;
+}
+.user-name { font-weight: 700; color: var(--text-strong); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.nav { flex: 1; overflow-y: auto; padding: 0 10px 10px; }
+.nav-group { margin-top: 10px; }
+.nav-head {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em; color: var(--sidebar-head);
+  padding: 6px 6px 4px; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center;
+}
+.nav-link {
+  display: flex; align-items: center; gap: 8px; width: 100%; padding: 6px 8px; border-radius: 3px;
+  border: 1px solid transparent; background: none; color: var(--sidebar-text); text-align: left;
+  font-weight: 700; font-size: 12.5px; transition: background .15s, border-color .15s, transform .1s;
+}
+.nav-link .ni { width: 18px; text-align: center; font-size: 14px; }
+.nav-link .count { margin-left: auto; font-size: 10.5px; font-weight: 400; color: var(--muted); }
+.nav-link:hover { background: var(--hover); }
+.nav-link:active { transform: translateY(1px); }
+.nav-link.active { background: var(--select-bg); border-color: var(--select-border); color: #fff; }
+.nav-link.active .count { color: #dbe7ff; }
+.sidebar-footer { padding: 8px 10px 10px; border-top: 1px solid var(--sidebar-border); }
+
+/* Luna: Explorer görev bölmesi kutuları */
+[data-theme="xp-luna"] .nav-group {
+  background: #d6dff7; border-radius: 6px 6px 0 0; overflow: hidden; margin-top: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+[data-theme="xp-luna"] .nav-head {
+  background: linear-gradient(90deg, #ffffff 0%, #c6d3f7 100%); color: #215dc6; padding: 6px 10px;
+  font-size: 11.5px; letter-spacing: 0; text-transform: none; font-family: "Trebuchet MS", Tahoma;
+}
+[data-theme="xp-luna"] .nav-group .nav-link { padding: 4px 10px; font-weight: 400; }
+[data-theme="xp-luna"] .nav-link:hover { background: transparent; text-decoration: underline; color: #428eff; }
+[data-theme="xp-luna"] .nav-link.active { background: #316ac5; color: #fff; text-decoration: none; border-color: #0a246a; }
+[data-theme="xp-luna"] .user-chip { background: rgba(255,255,255,.9); border-color: #fff; }
+[data-theme="xp-luna"] .sidebar-footer { border-top-color: rgba(255,255,255,.35); }
+[data-theme="xp-luna"] .sidebar-footer .nav-link { color: #fff; }
+[data-theme="xp-luna"] .nav-group .nav-link .count { color: #5577bb; }
+
+/* ---------- ÜST ÇUBUK ---------- */
+.topbar {
+  display: flex; align-items: center; gap: 16px; padding: 10px 20px; background: var(--topbar-bg);
+  border-bottom: 1px solid var(--border);
+}
+[data-theme="xp-luna"] .topbar { border-bottom: 1px solid #aca899; box-shadow: inset 0 -1px #fff; }
+.topbar-title h1 { font-size: 16px; color: var(--text-strong); }
+.crumb { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.search {
+  margin-left: auto; display: flex; align-items: center; gap: 6px; width: min(360px, 34vw);
+  background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 3px; padding: 4px 8px;
+}
+.search input { flex: 1; border: 0; outline: 0; background: transparent; color: var(--text); }
+.search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(58,131,241,.25); }
+.topbar-actions { display: flex; gap: 6px; }
+
+/* ---------- XP BUTONLARI ---------- */
+.xp-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-width: 75px; padding: 6px 14px; border-radius: 3px; border: 1px solid var(--btn-border);
+  background: var(--btn-bg); color: var(--btn-text); font-weight: 700; font-size: 12px;
+  transition: box-shadow .12s, transform .08s, filter .15s; white-space: nowrap;
+}
+.xp-btn:hover:not(:disabled) { box-shadow: var(--btn-hover-glow); }
+.xp-btn:active:not(:disabled) { transform: translateY(1px); filter: brightness(.95); }
+.xp-btn:disabled { opacity: .5; cursor: not-allowed; }
+.xp-btn.sm { min-width: 0; padding: 4px 10px; font-size: 11.5px; }
+.xp-btn.lg { padding: 9px 26px; font-size: 13.5px; }
+.xp-btn.primary {
+  color: #fff; border-color: #1e6b1e; text-shadow: 0 1px 1px rgba(0,0,0,.35);
+  background: linear-gradient(180deg, #74cf74 0%, #3fa83f 45%, #2e922e 55%, #49b149 100%);
+}
+.xp-btn.blue {
+  color: #fff; border-color: #0b3c99; text-shadow: 0 1px 1px rgba(0,0,0,.35);
+  background: linear-gradient(180deg, #5d9cf7 0%, #2e6fe0 45%, #2262d3 55%, #3b7cea 100%);
+}
+.xp-btn.danger {
+  color: #fff; border-color: #8a1f0b; text-shadow: 0 1px 1px rgba(0,0,0,.35);
+  background: linear-gradient(180deg, #f08a6e 0%, #e0603f 45%, #c9451f 55%, #db5a34 100%);
+}
+.badge {
+  display: inline-grid; place-items: center; min-width: 18px; height: 16px; padding: 0 5px; border-radius: 8px;
+  background: #e0603f; color: #fff; font-size: 10px; font-weight: 700;
+}
+.badge.zero { background: var(--surface-3); color: var(--muted); }
+
+/* ---------- XP PENCERE PANELİ ---------- */
+.win {
+  background: var(--win-body); border: 1px solid var(--win-border); border-radius: 7px 7px 3px 3px;
+  box-shadow: var(--card-shadow); overflow: hidden; display: flex; flex-direction: column;
+  animation: winIn .28s ease both;
+}
+[data-theme="xp-luna"] .win { border-width: 0 3px 3px; }
+.win-title {
+  display: flex; align-items: center; gap: 8px; padding: 0 6px 0 10px; height: 28px;
+  background: var(--title-grad); color: var(--title-text);
+  font-family: "Trebuchet MS", Tahoma, sans-serif; font-weight: 700; font-size: 12.5px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.45); flex-shrink: 0;
+}
+[data-theme="xp-luna"] .win-title { height: 30px; font-size: 13px; border-radius: 7px 7px 0 0; margin: 0 -3px; padding-left: 12px; }
+.win-title .wt-icon { font-size: 14px; filter: drop-shadow(0 1px 1px rgba(0,0,0,.4)); }
+.win-title .wt-sub { font-weight: 400; font-size: 11px; opacity: .85; }
+.win-title .wt-right { margin-left: auto; display: flex; gap: 4px; align-items: center; }
+.wt-ctrl {
+  width: 21px; height: 21px; border-radius: 3px; border: 1px solid #fff; display: grid; place-items: center;
+  font-size: 11px; font-weight: 700; color: #fff; text-shadow: none; padding: 0;
+  background: linear-gradient(180deg, #5d9cf7, #2e6fe0 50%, #2262d3 52%, #3b7cea);
+}
+.wt-ctrl.close { background: linear-gradient(180deg, #f08a6e, #e0603f 50%, #c9451f 52%, #db5a34); }
+.wt-ctrl:hover { filter: brightness(1.15); }
+.wt-link {
+  font-size: 10.5px; padding: 2px 8px; border-radius: 2px; border: 1px solid rgba(255,255,255,.55);
+  background: rgba(255,255,255,.14); color: #fff; font-weight: 700; text-shadow: none;
+}
+.wt-link:hover { background: rgba(255,255,255,.28); }
+.win-body { padding: 12px; flex: 1; min-height: 0; }
+.win-body.flush { padding: 0; }
+[data-theme="xp-luna"] .win-body { color: #000; }
+
+/* ---------- GRID YARDIMCILARI ---------- */
+.row { display: grid; gap: 14px; margin-bottom: 14px; }
+.cols-2 { grid-template-columns: 1fr 1fr; }
+.cols-side { grid-template-columns: 300px 1fr; }
+.cols-tool { grid-template-columns: minmax(0, 1.25fr) minmax(300px, 1fr); }
+@media (max-width: 1180px) { .cols-tool, .cols-side, .cols-2 { grid-template-columns: 1fr; } }
+
+/* ---------- KARŞILAMA ÇUBUĞU ---------- */
+.welcome {
+  display: flex; align-items: center; gap: 14px; padding: 12px 14px; margin-bottom: 14px; border-radius: 4px;
+  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--card-shadow);
+  animation: winIn .25s ease both;
+}
+.welcome h2 { font-size: 15px; color: var(--text-strong); }
+.welcome p { margin: 2px 0 0; font-size: 11.5px; color: var(--muted); }
+.welcome .actions { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+
+/* ---------- SİSTEM DURUM KARTI ---------- */
+.status-card {
+  position: relative; border-radius: 4px; overflow: hidden; color: #fff; min-height: 196px;
+  background: url("../assets/wallpaper.jpg") center 30% / cover;
+  border: 1px solid rgba(255,255,255,.25); padding: 14px; display: flex; flex-direction: column;
+}
+.status-card::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,40,110,.25), rgba(8,30,80,.15) 45%, rgba(0,0,0,.55));
+}
+.status-card > * { position: relative; }
+.status-card .big { font-size: 34px; font-weight: 700; font-family: "Trebuchet MS"; text-shadow: 0 2px 6px rgba(0,0,0,.5); line-height: 1; }
+.status-card .big small { font-size: 13px; font-weight: 400; display: block; margin-top: 4px; }
+.dep-list { margin-top: auto; display: grid; gap: 4px; }
+.dep {
+  display: flex; align-items: center; gap: 8px; padding: 4px 8px; border-radius: 3px;
+  background: rgba(0,0,0,.42); backdrop-filter: blur(4px); font-size: 11.5px;
+}
+.dep .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--err); box-shadow: 0 0 6px currentColor; }
+.dep.ok .dot { background: #4cd964; }
+.dep .dep-act { margin-left: auto; font-size: 10.5px; color: #ffd36b; background: none; border: 0; padding: 0; text-decoration: underline; }
+
+/* ---------- KUTUCUK / İKON ---------- */
+.tile {
+  width: 34px; height: 34px; border-radius: 6px; display: grid; place-items: center; font-size: 17px; flex-shrink: 0;
+  background: var(--c, #3a83f1); position: relative; overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), 0 1px 3px rgba(0,0,0,.35);
+}
+.tile::after {
+  content: ""; position: absolute; inset: 0 0 50% 0; border-radius: 6px 6px 40% 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,.45), rgba(255,255,255,.05));
+}
+.tile.lg { width: 46px; height: 46px; font-size: 23px; border-radius: 8px; }
+.tile.sm { width: 24px; height: 24px; font-size: 12px; border-radius: 4px; }
+
+/* ---------- HIZLI İŞLEM IZGARASI ---------- */
+.quick-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; height: 100%; }
+.quick {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center;
+  padding: 14px 8px; border-radius: 3px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); transition: transform .15s, border-color .15s, box-shadow .15s, background .15s;
+}
+.quick b { font-size: 12px; color: var(--text-strong); }
+.quick span.q-sub { font-size: 10.5px; color: var(--muted); }
+.quick:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 4px 14px rgba(0,0,0,.25); background: var(--surface-2); }
+[data-theme="xp-luna"] .quick:hover { background: #c1d2ee; border-color: #316ac5; }
+
+/* ---------- İSTATİSTİK KARTLARI ---------- */
+.stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 14px; }
+@media (max-width: 1180px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+.stat {
+  display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 4px;
+  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--card-shadow);
+  animation: winIn .3s ease both;
+}
+.stat .lbl { font-size: 10.5px; color: var(--muted); font-weight: 700; }
+.stat .val { font-size: 19px; font-weight: 700; color: var(--text-strong); font-family: "Trebuchet MS"; }
+
+/* ---------- ARAÇ KARTLARI ---------- */
+.tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.tool-card {
+  display: flex; gap: 12px; align-items: flex-start; padding: 12px; border-radius: 4px; text-align: left;
+  background: var(--surface); border: 1px solid var(--border); color: var(--text); position: relative;
+  transition: transform .15s, border-color .15s, box-shadow .15s, background .15s; animation: winIn .3s ease both;
+}
+.tool-card:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 6px 18px rgba(0,0,0,.28); }
+[data-theme="xp-luna"] .tool-card:hover { background: #e8eefa; border-color: #316ac5; }
+.tool-card h3 { font-size: 13px; color: var(--text-strong); margin-bottom: 3px; }
+.tool-card p { margin: 0; font-size: 11.5px; color: var(--muted); line-height: 1.4; }
+.tool-card .flag {
+  position: absolute; top: 8px; right: 8px; font-size: 9.5px; font-weight: 700; padding: 1px 6px; border-radius: 8px;
+  background: var(--surface-3); color: var(--muted); border: 1px solid var(--border);
+}
+.tool-card .flag.warn { background: rgba(255,176,32,.15); color: var(--warn); border-color: rgba(255,176,32,.4); }
+.tool-card.soon { opacity: .62; }
+.section-title {
+  display: flex; align-items: center; gap: 8px; margin: 4px 0 10px; font-family: "Trebuchet MS";
+  font-weight: 700; font-size: 13.5px; color: var(--text-strong);
+}
+[data-theme="xp-luna"] .section-title { color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.6); }
+
+/* ---------- DOSYA BIRAKMA ALANI ---------- */
+.dropzone {
+  border: 2px dashed var(--border-strong); border-radius: 6px; padding: 26px 16px; text-align: center;
+  background: var(--surface); transition: border-color .15s, background .15s, transform .15s; cursor: pointer;
+}
+.dropzone:hover, .dropzone.over { border-color: var(--accent); background: var(--hover); }
+.dropzone .dz-icon { font-size: 34px; animation: bob 2.4s ease-in-out infinite; }
+.dropzone h3 { font-size: 14px; color: var(--text-strong); margin: 6px 0 4px; }
+.dropzone p { margin: 0; font-size: 11.5px; color: var(--muted); }
+.ext-list { margin-top: 8px; font-size: 10.5px; color: var(--muted); word-break: break-word; }
+
+.file-list { margin-top: 10px; display: grid; gap: 4px; max-height: 300px; overflow: auto; }
+.file-row {
+  display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 3px;
+  background: var(--surface); border: 1px solid var(--border); animation: winIn .2s ease both;
+}
+.file-row .fname { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
+.file-row .fsize { font-size: 11px; color: var(--muted); }
+.icon-btn {
+  border: 1px solid transparent; background: none; color: var(--muted); padding: 2px 6px; border-radius: 3px; font-size: 12px;
+}
+.icon-btn:hover { border-color: var(--border); background: var(--surface-2); color: var(--text); }
+.ext-chip {
+  font-size: 9.5px; font-weight: 700; text-transform: uppercase; padding: 2px 5px; border-radius: 3px;
+  background: var(--accent); color: #fff; min-width: 34px; text-align: center;
+}
+
+/* ---------- FORM ---------- */
+.form { display: grid; gap: 12px; }
+.field label.lbl { display: block; font-weight: 700; font-size: 11.5px; margin-bottom: 4px; color: var(--text); }
+.field .hint { font-size: 10.5px; color: var(--muted); margin-top: 3px; }
+.xp-input, .xp-select, .xp-textarea {
+  width: 100%; padding: 5px 7px; border: 1px solid var(--input-border); border-radius: 2px;
+  background: var(--input-bg); color: var(--text); outline: none; user-select: text;
+}
+.xp-textarea { resize: vertical; min-height: 92px; font-family: Consolas, "Lucida Console", monospace; font-size: 12px; }
+.xp-input:focus, .xp-select:focus, .xp-textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(58,131,241,.2); }
+.xp-select {
+  appearance: none; padding-right: 26px; cursor: pointer;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0h8L4 5z' fill='%234d6185'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #c6d3f7 0%, #b4c8f6 50%, #a3bcf4 100%);
+  background-repeat: no-repeat; background-position: right 6px center, right 1px center; background-size: 8px 5px, 18px calc(100% - 2px);
+}
+.xp-select option { background: var(--surface); color: var(--text); }
+
+.check { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 12.5px; }
+.check input {
+  appearance: none; width: 14px; height: 14px; margin: 0; border: 1px solid #1c5180; border-radius: 2px; cursor: pointer;
+  background: linear-gradient(135deg, #dcdcd7, #fff); display: grid; place-items: center; flex-shrink: 0;
+}
+.check input:checked::after { content: "✔"; color: #21a121; font-size: 11px; font-weight: 700; line-height: 1; }
+.check input:hover { box-shadow: inset 0 0 0 1px #f8b636, inset 0 0 0 2px #fedf9c; }
+
+.range-wrap { display: flex; align-items: center; gap: 10px; }
+.range-wrap output { min-width: 54px; text-align: right; font-weight: 700; font-size: 12px; color: var(--accent-2); }
+input[type=range] { flex: 1; appearance: none; height: 22px; background: transparent; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: var(--surface-3); border: 1px solid var(--border-strong); }
+input[type=range]::-webkit-slider-thumb {
+  appearance: none; width: 11px; height: 20px; margin-top: -9px; border-radius: 2px 2px 6px 6px; border: 1px solid #1c5180;
+  background: linear-gradient(180deg, #fff, #ecebe6 50%, #d6d0c5); box-shadow: inset 0 -3px 0 #21a121;
+}
+fieldset.xp-fieldset { border: 1px solid var(--border); border-radius: 4px; padding: 10px 12px 12px; margin: 0; }
+fieldset.xp-fieldset legend { padding: 0 4px; color: var(--accent-2); font-weight: 700; font-size: 12px; }
+[data-theme="xp-luna"] fieldset.xp-fieldset { border-color: #d0d0bf; }
+[data-theme="xp-luna"] fieldset.xp-fieldset legend { color: #0046d5; }
+
+/* ---------- XP İLERLEME ÇUBUĞU ---------- */
+.progress {
+  height: 16px; border: 1px solid var(--progress-border); border-radius: 3px; background: var(--progress-track);
+  padding: 2px; overflow: hidden; position: relative;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.25);
+}
+.progress .fill {
+  height: 100%; width: 0%; border-radius: 1px; transition: width .3s ease;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 8px, var(--progress-track) 8px 10px),
+    linear-gradient(180deg, #acedad 0%, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #ffffff 100%);
+}
+.progress.indeterminate .fill { width: 30% !important; animation: marquee 1.4s linear infinite; }
+.progress.error .fill { filter: hue-rotate(250deg) saturate(1.4); }
+.progress.cancelled .fill { filter: grayscale(1); }
+
+/* ---------- İŞ SATIRLARI ---------- */
+.job-list { display: grid; gap: 8px; }
+.job {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 10px;
+  border-radius: 4px; border: 1px solid var(--border); background: var(--surface); animation: winIn .25s ease both;
+}
+.job .job-title { font-weight: 700; color: var(--text-strong); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.job .job-meta { font-size: 11px; color: var(--muted); margin: 2px 0 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.job .job-actions { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.job.done .job-meta { color: var(--ok); }
+.job.error .job-meta { color: var(--err); white-space: normal; }
+.job.cancelled .job-meta { color: var(--warn); }
+.outputs { grid-column: 2 / 4; display: grid; gap: 3px; }
+.out-file {
+  display: flex; align-items: center; gap: 6px; font-size: 11.5px; padding: 3px 6px; border-radius: 3px; background: var(--surface-2);
+}
+.out-file span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.empty { text-align: center; padding: 30px 10px; color: var(--muted); }
+.empty .e-icon { font-size: 30px; margin-bottom: 6px; opacity: .8; }
+
+/* ---------- KATEGORİ KUTULARI ---------- */
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.cat {
+  display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 3px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); text-align: left; transition: border-color .15s, transform .15s;
+}
+.cat:hover { border-color: var(--accent); transform: translateY(-1px); }
+.cat b { display: block; font-size: 12px; color: var(--text-strong); }
+.cat small { color: var(--muted); font-size: 10.5px; }
+
+/* ---------- AYARLAR ---------- */
+.theme-pick { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.theme-opt {
+  border: 2px solid var(--border); border-radius: 6px; padding: 8px; background: var(--surface); color: var(--text); text-align: left;
+  transition: border-color .15s, transform .15s;
+}
+.theme-opt:hover { transform: translateY(-1px); }
+.theme-opt.sel { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(58,131,241,.25); }
+.theme-prev { height: 74px; border-radius: 4px; margin-bottom: 6px; overflow: hidden; display: grid; grid-template-columns: 30% 1fr; }
+.theme-prev.dark { background: #1a1d23; }
+.theme-prev.dark .tp-side { background: #15181d; }
+.theme-prev.luna { background: url("../assets/wallpaper.jpg") center / cover; }
+.theme-prev.luna .tp-side { background: linear-gradient(180deg, #7ba2e7, #6375d6); }
+.tp-main { padding: 8px; }
+.tp-win { height: 100%; border-radius: 4px 4px 2px 2px; overflow: hidden; }
+.dark .tp-win { background: #22262d; border: 1px solid #2c3a55; }
+.luna .tp-win { background: #ece9d8; border: 2px solid #0055ea; border-top: 0; }
+.tp-bar { height: 10px; }
+.dark .tp-bar { background: linear-gradient(90deg, #17469f, #3a7fe8); }
+.luna .tp-bar { background: linear-gradient(180deg, #0997ff, #0053ee 30%, #0066ff); }
+.kv { display: grid; grid-template-columns: 140px 1fr; gap: 6px 12px; font-size: 12px; align-items: center; }
+.kv .k { color: var(--muted); font-weight: 700; }
+.path-box { display: flex; gap: 6px; }
+.path-box .xp-input { flex: 1; }
+
+/* ---------- GÖREV ÇUBUĞU ---------- */
+.taskbar { display: flex; align-items: stretch; background: var(--taskbar-bg); position: relative; z-index: 30; }
+.start-btn {
+  display: flex; align-items: center; gap: 6px; padding: 0 22px 0 10px; border: 0; color: #fff;
+  font-family: "Franklin Gothic Medium", "Trebuchet MS", sans-serif; font-size: 19px; font-weight: 700;
+  border-radius: 0 12px 12px 0; text-shadow: 1px 1px 2px rgba(0,0,0,.55);
+  background: radial-gradient(circle at 20% 0%, #8fd98f 0, transparent 60%),
+              linear-gradient(180deg, #3c8d3c 0%, #4eac4e 8%, #3a9a3a 40%, #2f8a2f 88%, #1f6b1f 100%);
+  box-shadow: inset -2px 0 4px rgba(0,0,0,.3), 2px 0 4px rgba(0,0,0,.3);
+  transition: filter .15s;
+}
+.start-btn i { font-style: italic; letter-spacing: .5px; }
+.start-btn:hover { filter: brightness(1.12); }
+.start-btn.open { filter: brightness(.85); }
+.start-flag {
+  font-style: normal; font-size: 17px; line-height: 1;
+  background: conic-gradient(#f35325 0 25%, #81bc06 0 50%, #ffba08 0 75%, #05a6f0 0);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.5));
+}
+.task-items { flex: 1; display: flex; gap: 4px; padding: 3px 8px; overflow: hidden; }
+.task-item {
+  display: flex; align-items: center; gap: 6px; max-width: 200px; min-width: 120px; padding: 0 10px; border-radius: 3px;
+  color: #fff; font-size: 11.5px; border: 1px solid rgba(0,0,0,.25); white-space: nowrap; overflow: hidden;
+  background: linear-gradient(180deg, #3c81f3 0%, #3170e1 50%, #2a63d1 100%); box-shadow: inset 0 1px rgba(255,255,255,.25);
+}
+.task-item span { overflow: hidden; text-overflow: ellipsis; }
+.task-item b { margin-left: auto; font-size: 10.5px; }
+.tray {
+  display: flex; align-items: center; gap: 10px; padding: 0 14px; color: #fff; font-size: 11.5px;
+  background: var(--tray-bg); border-left: 1px solid #092e8a; box-shadow: inset 1px 0 1px #18bbff;
+}
+.tray-icon { cursor: default; }
+.clock { font-weight: 400; min-width: 40px; text-align: center; }
+
+/* ---------- BAŞLAT MENÜSÜ ---------- */
+.start-menu {
+  position: fixed; left: 236px; bottom: 34px; width: 420px; z-index: 40; border-radius: 8px 8px 0 0; overflow: hidden;
+  border: 1px solid #0831d9; box-shadow: 4px 4px 12px rgba(0,0,0,.5); background: #fff;
+  animation: smIn .18s ease-out both;
+}
+.sm-head {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px; color: #fff; font-weight: 700; font-size: 15px;
+  font-family: "Trebuchet MS"; text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+  background: linear-gradient(180deg, #1868ce 0%, #0e60cb 12%, #0e60cb 20%, #1164cf 32%, #1667cf 33%, #1b6cd3 47%, #1e70d9 54%, #2476dc 60%, #297ae0 65%, #3482e3 77%, #3786e5 79%, #428ee9 90%, #4791eb 100%);
+}
+.sm-avatar { width: 40px; height: 40px; border-radius: 4px; border: 2px solid rgba(255,255,255,.85); background: #fff; }
+.sm-body { display: grid; grid-template-columns: 1fr 1fr; border-top: 2px solid #e88b33; max-height: 60vh; }
+.sm-left { background: #fff; padding: 6px; overflow: auto; }
+.sm-right { background: #d3e5fa; border-left: 1px solid #95bdee; padding: 6px; overflow: auto; }
+.sm-item {
+  display: flex; align-items: center; gap: 8px; width: 100%; padding: 5px 6px; border: 0; border-radius: 2px;
+  background: none; text-align: left; color: #000; font-size: 12px;
+}
+.sm-item b { display: block; font-size: 12px; }
+.sm-item small { color: #666; font-size: 10.5px; }
+.sm-right .sm-item { color: #0a246a; font-weight: 700; }
+.sm-item:hover { background: #316ac5; color: #fff; }
+.sm-item:hover small { color: #dbe7ff; }
+.sm-sep { height: 1px; margin: 4px 6px; background: linear-gradient(90deg, transparent, #b6bfd6, transparent); }
+.sm-foot {
+  display: flex; justify-content: flex-end; gap: 8px; padding: 6px 10px;
+  background: linear-gradient(180deg, #4282d6 0%, #3b85e0 3%, #418ae3 5%, #418ae3 17%, #3c87e2 21%, #3786e4 26%, #3482e3 29%, #2e7ee1 39%, #2374df 49%, #2072db 57%, #196edb 62%, #176bd8 72%, #1468d6 75%, #1165d6 83%, #0f61cb 88%);
+}
+.sm-foot-btn { border: 0; background: none; color: #fff; font-size: 12px; padding: 4px 8px; border-radius: 3px; }
+.sm-foot-btn:hover { background: rgba(255,255,255,.18); }
+
+/* =====================================================================
+   BAŞLAT MENÜSÜ — TEMA UYARLAMALARI (Win 2000, Win 2000 Koyu, XP Koyu, XP Luna)
+   ===================================================================== */
+
+/* 1) XP Koyu */
+[data-theme="xp-dark"] .start-menu,
+.start-menu[data-theme="xp-dark"] {
+  border: 1px solid #2c3a55; box-shadow: 4px 4px 18px rgba(0,0,0,.75); background: #1a1d23; border-radius: 8px 8px 0 0; bottom: 34px;
+}
+[data-theme="xp-dark"] .sm-head,
+.start-menu[data-theme="xp-dark"] .sm-head {
+  background: linear-gradient(90deg, #17469f 0%, #2563d1 55%, #3a7fe8 100%) !important; color: #fff;
+}
+[data-theme="xp-dark"] .sm-avatar,
+.start-menu[data-theme="xp-dark"] .sm-avatar { border: 2px solid rgba(255,255,255,.75); border-radius: 4px; background: #22262d; }
+[data-theme="xp-dark"] .sm-body,
+.start-menu[data-theme="xp-dark"] .sm-body { border-top: 2px solid #3a83f1 !important; }
+[data-theme="xp-dark"] .sm-left,
+.start-menu[data-theme="xp-dark"] .sm-left { background: #1f2329 !important; color: #dfe3ea; }
+[data-theme="xp-dark"] .sm-right,
+.start-menu[data-theme="xp-dark"] .sm-right { background: #17191e !important; border-left: 1px solid #2c3a55 !important; color: #c9ced7; }
+[data-theme="xp-dark"] .sm-item,
+.start-menu[data-theme="xp-dark"] .sm-item { color: #dfe3ea; border-radius: 3px; }
+[data-theme="xp-dark"] .sm-item b,
+.start-menu[data-theme="xp-dark"] .sm-item b { color: #ffffff; }
+[data-theme="xp-dark"] .sm-item small,
+.start-menu[data-theme="xp-dark"] .sm-item small { color: #8b93a1; }
+[data-theme="xp-dark"] .sm-right .sm-item,
+.start-menu[data-theme="xp-dark"] .sm-right .sm-item { color: #8fb6ff; font-weight: 700; }
+[data-theme="xp-dark"] .sm-item:hover,
+.start-menu[data-theme="xp-dark"] .sm-item:hover { background: #2563d1 !important; color: #ffffff !important; }
+[data-theme="xp-dark"] .sm-item:hover b,
+.start-menu[data-theme="xp-dark"] .sm-item:hover b { color: #ffffff !important; }
+[data-theme="xp-dark"] .sm-item:hover small,
+.start-menu[data-theme="xp-dark"] .sm-item:hover small { color: #dbe7ff !important; }
+[data-theme="xp-dark"] .sm-sep,
+.start-menu[data-theme="xp-dark"] .sm-sep { background: #2c3a55; }
+[data-theme="xp-dark"] .sm-foot,
+.start-menu[data-theme="xp-dark"] .sm-foot {
+  background: linear-gradient(180deg, #1f2329 0%, #15181d 100%) !important; border-top: 1px solid #2c3a55;
+}
+[data-theme="xp-dark"] .sm-foot-btn,
+.start-menu[data-theme="xp-dark"] .sm-foot-btn { color: #dfe3ea; }
+[data-theme="xp-dark"] .sm-foot-btn:hover,
+.start-menu[data-theme="xp-dark"] .sm-foot-btn:hover { background: rgba(255,255,255,.14); }
+
+/* 2) Windows 2000 Klasik */
+[data-theme="win2000"] .start-menu,
+.start-menu[data-theme="win2000"] {
+  border-top: 2px solid #ffffff !important; border-left: 2px solid #ffffff !important;
+  border-right: 2px solid #404040 !important; border-bottom: 2px solid #404040 !important;
+  border-radius: 0 !important; box-shadow: 2px 2px 0 #000000 !important; background: #d4d0c8 !important; bottom: 30px;
+}
+[data-theme="win2000"] .sm-head,
+.start-menu[data-theme="win2000"] .sm-head {
+  background: linear-gradient(90deg, #0a246a 0%, #1084d0 100%) !important; color: #ffffff !important;
+  font-family: Tahoma, sans-serif; font-size: 13px; font-weight: bold; border-radius: 0 !important; padding: 6px 10px;
+}
+[data-theme="win2000"] .sm-avatar,
+.start-menu[data-theme="win2000"] .sm-avatar {
+  border-radius: 0 !important; border-top: 2px solid #404040 !important; border-left: 2px solid #404040 !important;
+  border-right: 2px solid #ffffff !important; border-bottom: 2px solid #ffffff !important; background: #ffffff;
+}
+[data-theme="win2000"] .sm-body,
+.start-menu[data-theme="win2000"] .sm-body { border-top: 1px solid #808080 !important; }
+[data-theme="win2000"] .sm-left,
+.start-menu[data-theme="win2000"] .sm-left { background: #d4d0c8 !important; color: #000000; }
+[data-theme="win2000"] .sm-right,
+.start-menu[data-theme="win2000"] .sm-right { background: #ece9d8 !important; border-left: 1px solid #808080 !important; color: #000000; }
+[data-theme="win2000"] .sm-item,
+.start-menu[data-theme="win2000"] .sm-item { color: #000000; border-radius: 0 !important; font-family: Tahoma, sans-serif; font-size: 11.5px; }
+[data-theme="win2000"] .sm-item b,
+.start-menu[data-theme="win2000"] .sm-item b { color: #000000; }
+[data-theme="win2000"] .sm-item small,
+.start-menu[data-theme="win2000"] .sm-item small { color: #555555; }
+[data-theme="win2000"] .sm-right .sm-item,
+.start-menu[data-theme="win2000"] .sm-right .sm-item { color: #000000; font-weight: normal; }
+[data-theme="win2000"] .sm-item:hover,
+.start-menu[data-theme="win2000"] .sm-item:hover { background: #0a246a !important; color: #ffffff !important; }
+[data-theme="win2000"] .sm-item:hover b,
+.start-menu[data-theme="win2000"] .sm-item:hover b { color: #ffffff !important; }
+[data-theme="win2000"] .sm-item:hover small,
+.start-menu[data-theme="win2000"] .sm-item:hover small { color: #dbe7ff !important; }
+[data-theme="win2000"] .sm-sep,
+.start-menu[data-theme="win2000"] .sm-sep { background: #808080; box-shadow: 0 1px 0 #ffffff; height: 1px; }
+[data-theme="win2000"] .sm-foot,
+.start-menu[data-theme="win2000"] .sm-foot {
+  background: #d4d0c8 !important; border-top: 1px solid #808080 !important; box-shadow: inset 0 1px 0 #ffffff;
+}
+[data-theme="win2000"] .sm-foot-btn,
+.start-menu[data-theme="win2000"] .sm-foot-btn {
+  color: #000000 !important; font-family: Tahoma, sans-serif; font-size: 11px; border-radius: 0 !important;
+  background: #d4d0c8 !important; border-top: 2px solid #ffffff !important; border-left: 2px solid #ffffff !important;
+  border-right: 2px solid #404040 !important; border-bottom: 2px solid #404040 !important;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080; padding: 3px 8px;
+}
+[data-theme="win2000"] .sm-foot-btn:hover,
+.start-menu[data-theme="win2000"] .sm-foot-btn:hover {
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080; background: #e0ded7 !important;
+}
+[data-theme="win2000"] .sm-foot-btn:active,
+.start-menu[data-theme="win2000"] .sm-foot-btn:active {
+  border-top: 2px solid #404040 !important; border-left: 2px solid #404040 !important;
+  border-right: 2px solid #ffffff !important; border-bottom: 2px solid #ffffff !important;
+  box-shadow: inset 1px 1px 0 #808080;
+}
+
+/* 3) Windows 2000 Koyu (Dark) */
+[data-theme="win2000-dark"] .start-menu,
+.start-menu[data-theme="win2000-dark"] {
+  border-top: 2px solid #3a404c !important; border-left: 2px solid #3a404c !important;
+  border-right: 2px solid #111317 !important; border-bottom: 2px solid #111317 !important;
+  border-radius: 0 !important; box-shadow: 2px 2px 0 #000000 !important; background: #24272e !important; bottom: 30px;
+}
+[data-theme="win2000-dark"] .sm-head,
+.start-menu[data-theme="win2000-dark"] .sm-head {
+  background: linear-gradient(90deg, #10284d 0%, #1e457f 100%) !important; color: #ffffff !important;
+  font-family: Tahoma, sans-serif; font-size: 13px; font-weight: bold; border-radius: 0 !important; padding: 6px 10px;
+}
+[data-theme="win2000-dark"] .sm-avatar,
+.start-menu[data-theme="win2000-dark"] .sm-avatar {
+  border-radius: 0 !important; border-top: 2px solid #111317 !important; border-left: 2px solid #111317 !important;
+  border-right: 2px solid #3a404c !important; border-bottom: 2px solid #3a404c !important; background: #181a20;
+}
+[data-theme="win2000-dark"] .sm-body,
+.start-menu[data-theme="win2000-dark"] .sm-body { border-top: 1px solid #111317 !important; }
+[data-theme="win2000-dark"] .sm-left,
+.start-menu[data-theme="win2000-dark"] .sm-left { background: #24272e !important; color: #d8dbe2; }
+[data-theme="win2000-dark"] .sm-right,
+.start-menu[data-theme="win2000-dark"] .sm-right { background: #181a20 !important; border-left: 1px solid #111317 !important; color: #d8dbe2; }
+[data-theme="win2000-dark"] .sm-item,
+.start-menu[data-theme="win2000-dark"] .sm-item { color: #d8dbe2; border-radius: 0 !important; font-family: Tahoma, sans-serif; font-size: 11.5px; }
+[data-theme="win2000-dark"] .sm-item b,
+.start-menu[data-theme="win2000-dark"] .sm-item b { color: #ffffff; }
+[data-theme="win2000-dark"] .sm-item small,
+.start-menu[data-theme="win2000-dark"] .sm-item small { color: #88909e; }
+[data-theme="win2000-dark"] .sm-right .sm-item,
+.start-menu[data-theme="win2000-dark"] .sm-right .sm-item { color: #89b4fa; font-weight: normal; }
+[data-theme="win2000-dark"] .sm-item:hover,
+.start-menu[data-theme="win2000-dark"] .sm-item:hover { background: #1c3f7d !important; color: #ffffff !important; }
+[data-theme="win2000-dark"] .sm-item:hover b,
+.start-menu[data-theme="win2000-dark"] .sm-item:hover b { color: #ffffff !important; }
+[data-theme="win2000-dark"] .sm-item:hover small,
+.start-menu[data-theme="win2000-dark"] .sm-item:hover small { color: #dbe7ff !important; }
+[data-theme="win2000-dark"] .sm-sep,
+.start-menu[data-theme="win2000-dark"] .sm-sep { background: #111317; box-shadow: 0 1px 0 #3a404c; height: 1px; }
+[data-theme="win2000-dark"] .sm-foot,
+.start-menu[data-theme="win2000-dark"] .sm-foot {
+  background: #181a20 !important; border-top: 1px solid #111317 !important; box-shadow: inset 0 1px 0 #3a404c;
+}
+[data-theme="win2000-dark"] .sm-foot-btn,
+.start-menu[data-theme="win2000-dark"] .sm-foot-btn {
+  color: #ffffff !important; font-family: Tahoma, sans-serif; font-size: 11px; border-radius: 0 !important;
+  background: #2b3038 !important; border-top: 2px solid #3a404c !important; border-left: 2px solid #3a404c !important;
+  border-right: 2px solid #111317 !important; border-bottom: 2px solid #111317 !important;
+  box-shadow: inset 1px 1px 0 #4a5260, inset -1px -1px 0 #181a20; padding: 3px 8px;
+}
+[data-theme="win2000-dark"] .sm-foot-btn:hover,
+.start-menu[data-theme="win2000-dark"] .sm-foot-btn:hover {
+  box-shadow: inset 1px 1px 0 #4a5260, inset -1px -1px 0 #111317; background: #353b46 !important;
+}
+[data-theme="win2000-dark"] .sm-foot-btn:active,
+.start-menu[data-theme="win2000-dark"] .sm-foot-btn:active {
+  border-top: 2px solid #111317 !important; border-left: 2px solid #111317 !important;
+  border-right: 2px solid #3a404c !important; border-bottom: 2px solid #3a404c !important;
+  box-shadow: inset 1px 1px 0 #181a20;
+}
+
+/* 4) Windows XP Luna */
+[data-theme="xp-luna"] .start-menu,
+.start-menu[data-theme="xp-luna"] {
+  border: 1px solid #0831d9; box-shadow: 4px 4px 12px rgba(0,0,0,.5); background: #fff; border-radius: 8px 8px 0 0; bottom: 34px;
+}
+[data-theme="xp-luna"] .sm-head,
+.start-menu[data-theme="xp-luna"] .sm-head {
+  background: linear-gradient(180deg, #1868ce 0%, #0e60cb 12%, #0e60cb 20%, #1164cf 32%, #1667cf 33%, #1b6cd3 47%, #1e70d9 54%, #2476dc 60%, #297ae0 65%, #3482e3 77%, #3786e5 79%, #428ee9 90%, #4791eb 100%) !important;
+  color: #fff; font-family: "Trebuchet MS";
+}
+[data-theme="xp-luna"] .sm-avatar,
+.start-menu[data-theme="xp-luna"] .sm-avatar { border: 2px solid rgba(255,255,255,.85); border-radius: 4px; background: #fff; }
+[data-theme="xp-luna"] .sm-body,
+.start-menu[data-theme="xp-luna"] .sm-body { border-top: 2px solid #e88b33 !important; }
+[data-theme="xp-luna"] .sm-left,
+.start-menu[data-theme="xp-luna"] .sm-left { background: #fff !important; color: #000; }
+[data-theme="xp-luna"] .sm-right,
+.start-menu[data-theme="xp-luna"] .sm-right { background: #d3e5fa !important; border-left: 1px solid #95bdee !important; color: #0a246a; }
+[data-theme="xp-luna"] .sm-item:hover,
+.start-menu[data-theme="xp-luna"] .sm-item:hover { background: #316ac5 !important; color: #fff !important; }
+[data-theme="xp-luna"] .sm-foot,
+.start-menu[data-theme="xp-luna"] .sm-foot {
+  background: linear-gradient(180deg, #4282d6 0%, #3b85e0 3%, #418ae3 5%, #418ae3 17%, #3c87e2 21%, #3786e4 26%, #3482e3 29%, #2e7ee1 39%, #2374df 49%, #2072db 57%, #196edb 62%, #176bd8 72%, #1468d6 75%, #1165d6 83%, #0f61cb 88%) !important;
+}
+
+
+/* ---------- XP BALON BİLDİRİMİ ---------- */
+.balloons { position: fixed; right: 12px; bottom: 44px; z-index: 50; display: grid; gap: 8px; justify-items: end; }
+.balloon {
+  position: relative; width: 300px; padding: 10px 28px 10px 12px; border-radius: 8px; border: 1px solid #000;
+  background: #ffffe1; color: #000; box-shadow: 3px 3px 8px rgba(0,0,0,.35); animation: balloonIn .3s ease both;
+  font-size: 12px; cursor: pointer;
+}
+.balloon::after {
+  content: ""; position: absolute; right: 40px; bottom: -12px; border: 12px solid transparent; border-bottom: 0;
+  border-top-color: #ffffe1; filter: drop-shadow(0 1px 0 #000);
+}
+.balloon b { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+.balloon .b-x {
+  position: absolute; top: 6px; right: 6px; width: 15px; height: 15px; display: grid; place-items: center; font-size: 10px;
+  border: 1px solid #b9b9a5; border-radius: 2px; background: #fff; padding: 0;
+}
+.balloon.out { animation: balloonOut .25s ease forwards; }
+
+/* ---------- SÜRÜKLE-BIRAK KATMANI ---------- */
+.drop-overlay {
+  position: fixed; inset: 0; z-index: 60; display: none; place-items: center; pointer-events: none;
+  background: rgba(20, 60, 160, .35); backdrop-filter: blur(2px);
+}
+.drop-overlay div {
+  padding: 22px 36px; border-radius: 8px; border: 3px dashed #fff; color: #fff; font-size: 20px; font-weight: 700;
+  font-family: "Trebuchet MS"; background: rgba(0, 40, 120, .55);
+}
+body.dragging .drop-overlay { display: grid; }
+
+/* ---------- ANİMASYONLAR ---------- */
+@keyframes winIn { from { opacity: 0; transform: translateY(6px) scale(.995); } to { opacity: 1; transform: none; } }
+@keyframes smIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes balloonIn { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes balloonOut { to { opacity: 0; transform: translateY(6px); } }
+@keyframes marquee { from { margin-left: -30%; } to { margin-left: 100%; } }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { display: inline-block; animation: spin 1.2s linear infinite; }
+
+/* =====================================================================
+   Windows 2000 / Windows Classic Otantik Stiller
+   ===================================================================== */
+[data-theme="win2000"] .app { background: #3a6ea5; }
+[data-theme="win2000"] .content { background: #3a6ea5; }
+[data-theme="win2000"] .sidebar {
+  background: #d4d0c8; border-right: 2px solid #808080; box-shadow: inset 1px 0 0 #ffffff;
+}
+[data-theme="win2000"] .brand {
+  border-bottom: 2px solid #808080; box-shadow: 0 1px 0 #ffffff; padding: 10px;
+}
+[data-theme="win2000"] .brand-name { color: #000; font-family: Tahoma, sans-serif; font-size: 13px; }
+[data-theme="win2000"] .brand-sub { color: #444; }
+[data-theme="win2000"] .user-chip {
+  background: #ffffff; border-top: 2px solid #808080; border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff; border-radius: 0; box-shadow: inset 1px 1px 0 #000;
+}
+[data-theme="win2000"] .user-name { color: #000; font-family: Tahoma, sans-serif; font-size: 11px; }
+[data-theme="win2000"] .nav-head { color: #0a246a; font-family: Tahoma, sans-serif; }
+[data-theme="win2000"] .nav-link {
+  color: #000; border-radius: 0; font-family: Tahoma, sans-serif; font-weight: normal; font-size: 11.5px; padding: 4px 8px;
+}
+[data-theme="win2000"] .nav-link:hover { background: #b5c7de; }
+[data-theme="win2000"] .nav-link.active { background: #0a246a; color: #fff; border: 1px dotted #fff; }
+[data-theme="win2000"] .topbar {
+  background: #d4d0c8; border-bottom: 2px solid #808080; box-shadow: 0 1px 0 #ffffff; padding: 6px 14px;
+}
+[data-theme="win2000"] .topbar-title h1 { color: #000; font-family: Tahoma, sans-serif; font-size: 13px; font-weight: bold; }
+[data-theme="win2000"] .win {
+  border-radius: 0; background: #d4d0c8; border-top: 2px solid #ffffff; border-left: 2px solid #ffffff;
+  border-right: 2px solid #404040; border-bottom: 2px solid #404040;
+  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #dfdfdf;
+}
+[data-theme="win2000"] .win-title {
+  height: 22px; border-radius: 0; margin: 2px 2px 0 2px; padding: 0 4px 0 6px;
+  font-family: Tahoma, "Segoe UI", sans-serif; font-size: 11.5px; font-weight: bold;
+  background: linear-gradient(90deg, #0a246a 0%, #1084d0 100%); color: #ffffff; text-shadow: none;
+}
+[data-theme="win2000"] .wt-ctrl {
+  width: 16px; height: 14px; border-radius: 0; background: #d4d0c8; color: #000;
+  font-family: Tahoma, sans-serif; font-size: 10px; font-weight: bold;
+  border-top: 1px solid #ffffff; border-left: 1px solid #ffffff; border-right: 1px solid #404040; border-bottom: 1px solid #404040;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080;
+}
+[data-theme="win2000"] .wt-ctrl:active {
+  border-top: 1px solid #404040; border-left: 1px solid #404040; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff;
+  box-shadow: inset 1px 1px 0 #808080;
+}
+[data-theme="win2000"] .xp-btn {
+  border-radius: 0; background: #d4d0c8; color: #000; font-family: Tahoma, sans-serif; font-size: 11px; font-weight: normal;
+  border-top: 2px solid #ffffff; border-left: 2px solid #ffffff; border-right: 2px solid #404040; border-bottom: 2px solid #404040;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080; text-shadow: none;
+}
+[data-theme="win2000"] .xp-btn:hover { box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080; }
+[data-theme="win2000"] .xp-btn:active {
+  border-top: 2px solid #404040; border-left: 2px solid #404040; border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px 0 #808080;
+}
+[data-theme="win2000"] .taskbar { background: #d4d0c8; border-top: 2px solid #ffffff; height: 30px; }
+[data-theme="win2000"] .start-btn {
+  border-radius: 0; background: #d4d0c8; color: #000; font-family: Tahoma, sans-serif; font-size: 12px; font-weight: bold;
+  border-top: 2px solid #ffffff; border-left: 2px solid #ffffff; border-right: 2px solid #404040; border-bottom: 2px solid #404040;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080; text-shadow: none; height: 24px; margin: 3px 2px; padding: 0 8px;
+}
+[data-theme="win2000"] .start-btn i { font-style: normal; }
+[data-theme="win2000"] .start-btn:active,
+[data-theme="win2000"] .start-btn.open {
+  border-top: 2px solid #404040; border-left: 2px solid #404040; border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px 0 #808080;
+}
+[data-theme="win2000"] .tray {
+  background: #d4d0c8; border-top: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff; color: #000; box-shadow: none; height: 24px; margin: 3px 4px; padding: 0 8px;
+}
+[data-theme="win2000"] .xp-input,
+[data-theme="win2000"] .xp-select,
+[data-theme="win2000"] .xp-textarea,
+[data-theme="win2000"] .search {
+  border-radius: 0; background: #ffffff; color: #000; border-top: 2px solid #808080; border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff; box-shadow: inset 1px 1px 0 #000; font-family: Tahoma, sans-serif; font-size: 11px;
+}
+[data-theme="win2000"] .dropzone {
+  border-radius: 0; background: #ffffff; border-top: 2px solid #808080; border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff; border-bottom: 2px solid #ffffff; box-shadow: inset 1px 1px 0 #000;
+}
+[data-theme="win2000"] .tool-card,
+[data-theme="win2000"] .quick,
+[data-theme="win2000"] .stat,
+[data-theme="win2000"] .welcome {
+  border-radius: 0; background: #d4d0c8; border-top: 2px solid #ffffff; border-left: 2px solid #ffffff;
+  border-right: 2px solid #404040; border-bottom: 2px solid #404040;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080; color: #000;
+}
+
+/* =====================================================================
+   Windows 2000 Karanlık (Dark) Teması
+   ===================================================================== */
+[data-theme="win2000-dark"] .app { background: #14171d; }
+[data-theme="win2000-dark"] .content { background: #14171d; }
+[data-theme="win2000-dark"] .sidebar {
+  background: #24272e; border-right: 2px solid #111317; box-shadow: inset 1px 0 0 #3a404c;
+}
+[data-theme="win2000-dark"] .brand {
+  border-bottom: 2px solid #111317; box-shadow: 0 1px 0 #3a404c; padding: 10px;
+}
+[data-theme="win2000-dark"] .brand-name { color: #fff; font-family: Tahoma, sans-serif; font-size: 13px; }
+[data-theme="win2000-dark"] .brand-sub { color: #88909e; }
+[data-theme="win2000-dark"] .user-chip {
+  background: #181a20; border-top: 2px solid #111317; border-left: 2px solid #111317;
+  border-right: 2px solid #3a404c; border-bottom: 2px solid #3a404c; border-radius: 0; box-shadow: inset 1px 1px 0 #000;
+}
+[data-theme="win2000-dark"] .user-name { color: #fff; font-family: Tahoma, sans-serif; font-size: 11px; }
+[data-theme="win2000-dark"] .nav-head { color: #89b4fa; font-family: Tahoma, sans-serif; }
+[data-theme="win2000-dark"] .nav-link {
+  color: #d8dbe2; border-radius: 0; font-family: Tahoma, sans-serif; font-weight: normal; font-size: 11.5px; padding: 4px 8px;
+}
+[data-theme="win2000-dark"] .nav-link:hover { background: #2f3642; }
+[data-theme="win2000-dark"] .nav-link.active { background: #1c3f7d; color: #fff; border: 1px dotted #89b4fa; }
+[data-theme="win2000-dark"] .topbar {
+  background: #24272e; border-bottom: 2px solid #111317; box-shadow: 0 1px 0 #3a404c; padding: 6px 14px;
+}
+[data-theme="win2000-dark"] .topbar-title h1 { color: #fff; font-family: Tahoma, sans-serif; font-size: 13px; font-weight: bold; }
+[data-theme="win2000-dark"] .win {
+  border-radius: 0; background: #24272e; border-top: 2px solid #3a404c; border-left: 2px solid #3a404c;
+  border-right: 2px solid #111317; border-bottom: 2px solid #111317;
+  box-shadow: inset -1px -1px 0 #181a20, inset 1px 1px 0 #4a5260;
+}
+[data-theme="win2000-dark"] .win-title {
+  height: 22px; border-radius: 0; margin: 2px 2px 0 2px; padding: 0 4px 0 6px;
+  font-family: Tahoma, "Segoe UI", sans-serif; font-size: 11.5px; font-weight: bold;
+  background: linear-gradient(90deg, #10284d 0%, #1e457f 100%); color: #ffffff; text-shadow: none;
+}
+[data-theme="win2000-dark"] .wt-ctrl {
+  width: 16px; height: 14px; border-radius: 0; background: #2b3038; color: #fff;
+  font-family: Tahoma, sans-serif; font-size: 10px; font-weight: bold;
+  border-top: 1px solid #3a404c; border-left: 1px solid #3a404c; border-right: 1px solid #111317; border-bottom: 1px solid #111317;
+  box-shadow: inset 1px 1px 0 #4a5260, inset -1px -1px 0 #181a20;
+}
+[data-theme="win2000-dark"] .wt-ctrl:active {
+  border-top: 1px solid #111317; border-left: 1px solid #111317; border-right: 1px solid #3a404c; border-bottom: 1px solid #3a404c;
+  box-shadow: inset 1px 1px 0 #181a20;
+}
+[data-theme="win2000-dark"] .xp-btn {
+  border-radius: 0; background: #2b3038; color: #fff; font-family: Tahoma, sans-serif; font-size: 11px; font-weight: normal;
+  border-top: 2px solid #3a404c; border-left: 2px solid #3a404c; border-right: 2px solid #111317; border-bottom: 2px solid #111317;
+  box-shadow: inset 1px 1px 0 #4a5260, inset -1px -1px 0 #181a20; text-shadow: none;
+}
+[data-theme="win2000-dark"] .xp-btn:hover { box-shadow: inset 1px 1px 0 #4a5260, inset -1px -1px 0 #111317; }
+[data-theme="win2000-dark"] .xp-btn:active {
+  border-top: 2px solid #111317; border-left: 2px solid #111317; border-right: 2px solid #3a404c; border-bottom: 2px solid #3a404c;
+  box-shadow: inset 1px 1px 0 #181a20;
+}
+[data-theme="win2000-dark"] .taskbar { background: #24272e; border-top: 2px solid #3a404c; height: 30px; }
+[data-theme="win2000-dark"] .start-btn {
+  border-radius: 0; background: #2b3038; color: #fff; font-family: Tahoma, sans-serif; font-size: 12px; font-weight: bold;
+  border-top: 2px solid #3a404c; border-left: 2px solid #3a404c; border-right: 2px solid #111317; border-bottom: 2px solid #111317;
+  box-shadow: inset 1px 1px 0 #4a5260, inset -1px -1px 0 #181a20; text-shadow: none; height: 24px; margin: 3px 2px; padding: 0 8px;
+}
+[data-theme="win2000-dark"] .start-btn i { font-style: normal; }
+[data-theme="win2000-dark"] .start-btn:active,
+[data-theme="win2000-dark"] .start-btn.open {
+  border-top: 2px solid #111317; border-left: 2px solid #111317; border-right: 2px solid #3a404c; border-bottom: 2px solid #3a404c;
+  box-shadow: inset 1px 1px 0 #181a20;
+}
+[data-theme="win2000-dark"] .tray {
+  background: #24272e; border-top: 1px solid #111317; border-left: 1px solid #111317; border-right: 1px solid #3a404c;
+  border-bottom: 1px solid #3a404c; color: #fff; box-shadow: none; height: 24px; margin: 3px 4px; padding: 0 8px;
+}
+[data-theme="win2000-dark"] .xp-input,
+[data-theme="win2000-dark"] .xp-select,
+[data-theme="win2000-dark"] .xp-textarea,
+[data-theme="win2000-dark"] .search {
+  border-radius: 0; background: #181a20; color: #fff; border-top: 2px solid #111317; border-left: 2px solid #111317;
+  border-right: 2px solid #3a404c; border-bottom: 2px solid #3a404c; box-shadow: inset 1px 1px 0 #000; font-family: Tahoma, sans-serif; font-size: 11px;
+}
+[data-theme="win2000-dark"] .dropzone {
+  border-radius: 0; background: #181a20; border-top: 2px solid #111317; border-left: 2px solid #111317;
+  border-right: 2px solid #3a404c; border-bottom: 2px solid #3a404c; box-shadow: inset 1px 1px 0 #000;
+}
+[data-theme="win2000-dark"] .tool-card,
+[data-theme="win2000-dark"] .quick,
+[data-theme="win2000-dark"] .stat,
+[data-theme="win2000-dark"] .welcome {
+  border-radius: 0; background: #24272e; border-top: 2px solid #3a404c; border-left: 2px solid #3a404c;
+  border-right: 2px solid #111317; border-bottom: 2px solid #111317;
+  box-shadow: inset 1px 1px 0 #4a5260, inset -1px -1px 0 #181a20; color: #d8dbe2;
+}
+[data-theme="win2000-dark"] .tool-card h3,
+[data-theme="win2000-dark"] .quick b,
+[data-theme="win2000-dark"] .stat .val,
+[data-theme="win2000-dark"] .welcome h2 {
+  color: #ffffff;
+}
+
+
