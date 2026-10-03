@@ -4,6 +4,15 @@
 
 ---
 
+## 💾 Hazır İndirilebilir Sürüm (Kurulumsuz EXE)
+
+Python veya terminal kullanmadan doğrudan çalıştırmak için:
+1. **[GitHub Releases](https://github.com/ZOYTRK/ZOYMediaTool/releases)** sayfasından son sürüm `ZOYMediaTool-v2.0-Windows.zip` dosyasını indirin.
+2. ZIP dosyasını klasöre çıkartın ve `ZOYMediaTool.exe` dosyasına çift tıklayın.
+3. *FFmpeg, grafiksel arayüz ve tüm medya motorları pakete dahildir; ek hiçbir kuruluma gerek yoktur.*
+
+---
+
 ## ✨ Özellikler
 
 ### 🎨 Retro & Modern Arayüz
