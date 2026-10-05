@@ -3,7 +3,7 @@ import os
 
 import yt_dlp
 
-from ..paths import resource_path
+from ..paths import resource_path, find_ffmpeg
 
 
 def _size(b):
@@ -66,8 +66,11 @@ def download(ctx, urls, options):
         "quiet": True,
         "no_warnings": True,
         "noplaylist": not options.get("playlist", False),
-        "ffmpeg_location": resource_path(""),
+        "ffmpeg_location": find_ffmpeg() or resource_path(""),
         "windowsfilenames": True,
+        "extractor_args": {
+            "generic": {"impersonate": ["chrome"]},
+        },
     }
 
     if mode == "video":

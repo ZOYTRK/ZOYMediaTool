@@ -6,7 +6,7 @@ import re
 import urllib.request
 import zipfile
 
-import fitz  # PyMuPDF
+import pymupdf as fitz
 from .ffmpeg_utils import stem
 
 
@@ -309,40 +309,46 @@ def vector_convert(ctx, files, opts):
 # =====================================================================
 # 7. WEB SAYFASI YAKALAYICI (URL -> PDF / HTML / TXT)
 # =====================================================================
-def web_capture(ctx, url, opts):
-    ctx.progress(0.2, "Web sayfası indiriliyor...")
+def web_capture(ctx, urls, opts):
+    if isinstance(urls, str):
+        urls = [urls]
+    urls = [u.strip() for u in urls if u and u.strip()]
+    if not urls:
+        raise ValueError("Lütfen en az bir geçerli web adresi girin.")
+
     target = opts.get("format", "pdf").lower()
-    clean_name = re.sub(r"[^\w\-]", "_", url.replace("https://", "").replace("http://", ""))[:40] or "web_sayfasi"
-    out = ctx.out_path(f"{clean_name}.{target}")
+    for i, url in enumerate(urls):
+        ctx.progress(i / len(urls), f"Web sayfası indiriliyor: {url}")
+        clean_name = re.sub(r"[^\w\-]", "_", url.replace("https://", "").replace("http://", ""))[:40] or "web_sayfasi"
+        out = ctx.out_path(f"{clean_name}.{target}")
 
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        content = resp.read().decode("utf-8", errors="ignore")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            content = resp.read().decode("utf-8", errors="ignore")
 
-    ctx.progress(0.7, "Format dönüştürülüyor...")
-    if target == "html":
-        with open(out, "w", encoding="utf-8") as fh:
-            fh.write(content)
-    elif target == "txt":
-        text = re.sub(r"<[^>]+>", " ", content)
-        text = re.sub(r"\s+", " ", text).strip()
-        with open(out, "w", encoding="utf-8") as fh:
-            fh.write(text)
-    else:  # pdf
-        text = re.sub(r"<[^>]+>", " ", content)
-        text = re.sub(r"\s+", " ", text).strip()
-        title_match = re.search(r"<title>(.*?)</title>", content, re.IGNORECASE)
-        page_title = title_match.group(1) if title_match else url
+        if target == "html":
+            with open(out, "w", encoding="utf-8") as fh:
+                fh.write(content)
+        elif target == "txt":
+            text = re.sub(r"<[^>]+>", " ", content)
+            text = re.sub(r"\s+", " ", text).strip()
+            with open(out, "w", encoding="utf-8") as fh:
+                fh.write(text)
+        else:  # pdf
+            text = re.sub(r"<[^>]+>", " ", content)
+            text = re.sub(r"\s+", " ", text).strip()
+            title_match = re.search(r"<title>(.*?)</title>", content, re.IGNORECASE)
+            page_title = title_match.group(1) if title_match else url
 
-        doc = fitz.open()
-        page = doc.new_page()
-        page.insert_text((50, 40), f"Web Kaydı: {page_title[:60]}", fontsize=13, fontname="helv")
-        page.insert_text((50, 56), f"URL: {url[:80]}", fontsize=8, fontname="couri")
-        page.draw_line(fitz.Point(50, 65), fitz.Point(page.rect.width - 50, 65))
-        page.insert_textbox(fitz.Rect(50, 75, page.rect.width - 50, page.rect.height - 50),
-                            text[:25000], fontsize=10, fontname="helv")
-        doc.save(out)
-        doc.close()
+            doc = fitz.open()
+            page = doc.new_page()
+            page.insert_text((50, 40), f"Web Kaydı: {page_title[:60]}", fontsize=13, fontname="helv")
+            page.insert_text((50, 56), f"URL: {url[:80]}", fontsize=8, fontname="couri")
+            page.draw_line(fitz.Point(50, 65), fitz.Point(page.rect.width - 50, 65))
+            page.insert_textbox(fitz.Rect(50, 75, page.rect.width - 50, page.rect.height - 50),
+                                text[:25000], fontsize=10, fontname="helv")
+            doc.save(out)
+            doc.close()
 
-    ctx.progress(1.0, "Tamamlandı!")
-    ctx.add_output(out)
+        ctx.add_output(out)
+
